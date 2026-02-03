@@ -1,0 +1,9 @@
+#!/bin/sh
+
+# Data simples e garantida (sem locale estranho)
+DAY="$(date +%d)"
+FULL="$(date +%d/%m/%Y)"
+TOOLTIP="$(date +'%A, %d %B %Y')"
+
+# JSON PURO, sem nada antes
+printf '{"text":"%s","alt":"%s","tooltip":"%s"}\n' "$DAY" "$FULL" "$TOOLTIP"
